@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadio Pokémon</title>
+    <!-- Se usan fuentes de Google Fonts: 'Press Start 2P' para estética gamer y 'Roboto' para lectura -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Logica.js incluye todas las clases y funciones de combate JS -->
+    <script src="logica.js" defer></script>
+</head>
+<body>
+    <div class="stadium-container">
+        <!-- Overlay oscuro para dar contraste y asegurar de que el texto se lee sobre la imagen de fondo -->
+        <div class="stadium-overlay"></div>
+        
+        <header>
+            <h1 class="title">Estadio Pokémon</h1>
+        </header>
+
+        <main class="battlefield">
+            <!-- Zona Entrenador 1 -->
+            <div class="trainer-zone zona-1">
+                <div class="trainer-selector">
+                    <label for="entrenador1">Entrenador 1</label>
+                    <div class="select-wrapper">
+                        <select id="entrenador1">
+                            <option value="Ash" selected>Ash</option>
+                            <option value="Misty">Misty</option>
+                            <option value="Tom">Tom</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pokemon-display">
+                    <img class="pokemon-img" src="" alt="Pokemon">
+                    <div class="pokemon-info">
+                        <h2 class="pokemon-name">Pokemon</h2>
+                        <div class="pokemon-stats">
+                            <span class="pokemon-level">Nivel: XX</span>
+                            <span class="pokemon-type">Tipo: XX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Central -->
+            <div class="center-action">
+                <button id="btn-luchar" class="btn-luchar">
+                    <span class="btn-text">¡LUCHAR!</span>
+                </button>
+            </div>
+
+            <!-- Zona Entrenador 2 -->
+            <div class="trainer-zone zona-2">
+                <div class="trainer-selector">
+                    <label for="entrenador2">Entrenador 2</label>
+                    <div class="select-wrapper">
+                        <select id="entrenador2">
+                            <option value="Tom" selected>Tom</option>
+                            <option value="Ash">Ash</option>
+                            <option value="Misty">Misty</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Clase 'reverse' para alinear si es necesario, aunque mantenemos el mismo layout -->
+                <div class="pokemon-display reverse">
+                    <img class="pokemon-img" src="" alt="Pokemon">
+                    <div class="pokemon-info">
+                        <h2 class="pokemon-name">Pokemon</h2>
+                        <div class="pokemon-stats">
+                            <span class="pokemon-level">Nivel: XX</span>
+                            <span class="pokemon-type">Tipo: XX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Panel de Resultados (Oculto por defecto) -->
+        <div id="panel-resultados" class="panel-resultados oculto">
+            <div class="glass-panel">
+                <div id="resultados-content"></div>
+                <button class="btn-close" onclick="document.getElementById('panel-resultados').classList.remove('mostrar'); document.getElementById('panel-resultados').classList.add('oculto');">Continuar Batalla</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
