@@ -32,6 +32,15 @@
                         </select>
                     </div>
                 </div>
+                <div class="pokemon-selector">
+                    <label for="pokemon1">Pokémon</label>
+                    <div class="select-wrapper">
+                        <select id="pokemon1" disabled>
+                            <option value="">Cargando Pokémon...</option>
+                        </select>
+                    </div>
+                    <div class="loading-spinner oculto" id="spinner1">Cargando...</div>
+                </div>
                 <div class="pokemon-display">
                     <img class="pokemon-img" src="" alt="Pokemon">
                     <div class="pokemon-info">
@@ -46,7 +55,7 @@
 
             <!-- Botón Central -->
             <div class="center-action">
-                <button id="btn-luchar" class="btn-luchar">
+                <button id="btn-luchar" class="btn-luchar" disabled>
                     <span class="btn-text">¡LUCHAR!</span>
                 </button>
             </div>
@@ -62,6 +71,15 @@
                             <option value="Misty">Misty</option>
                         </select>
                     </div>
+                </div>
+                <div class="pokemon-selector">
+                    <label for="pokemon2">Pokémon</label>
+                    <div class="select-wrapper">
+                        <select id="pokemon2" disabled>
+                            <option value="">Cargando Pokémon...</option>
+                        </select>
+                    </div>
+                    <div class="loading-spinner oculto" id="spinner2">Cargando...</div>
                 </div>
                 <!-- Clase 'reverse' para alinear si es necesario, aunque mantenemos el mismo layout -->
                 <div class="pokemon-display reverse">
