@@ -13,6 +13,18 @@
     --tipo-tierra: #e0c068;
     --tipo-aire: #a890f0;
     /* Volador / Aire */
+    --tipo-normal: #a8a878;
+    --tipo-electrico: #f8d030;
+    --tipo-planta: #78c850;
+    --tipo-hielo: #98d8d8;
+    --tipo-lucha: #c03028;
+    --tipo-veneno: #a040a0;
+    --tipo-psiquico: #f85888;
+    --tipo-bicho: #a8b820;
+    --tipo-fantasma: #705898;
+    --tipo-dragon: #7038f8;
+    --tipo-siniestro: #705848;
+    --tipo-acero: #b8b8d0;
 }
 
 * {
@@ -207,6 +219,112 @@ header {
     color: white;
 }
 
+.tipo-normal {
+    background-color: var(--tipo-normal);
+    color: black;
+}
+
+.tipo-electrico {
+    background-color: var(--tipo-electrico);
+    color: black;
+}
+
+.tipo-planta {
+    background-color: var(--tipo-planta);
+    color: white;
+}
+
+.tipo-hielo {
+    background-color: var(--tipo-hielo);
+    color: black;
+}
+
+.tipo-lucha {
+    background-color: var(--tipo-lucha);
+    color: white;
+}
+
+.tipo-veneno {
+    background-color: var(--tipo-veneno);
+    color: white;
+}
+
+.tipo-psiquico {
+    background-color: var(--tipo-psiquico);
+    color: white;
+}
+
+.tipo-bicho {
+    background-color: var(--tipo-bicho);
+    color: white;
+}
+
+.tipo-fantasma {
+    background-color: var(--tipo-fantasma);
+    color: white;
+}
+
+.tipo-dragon {
+    background-color: var(--tipo-dragon);
+    color: white;
+}
+
+.tipo-siniestro {
+    background-color: var(--tipo-siniestro);
+    color: white;
+}
+
+.tipo-acero {
+    background-color: var(--tipo-acero);
+    color: black;
+}
+
+/* Selector de Pokémon (mismo estilo que trainer-selector) */
+.pokemon-selector {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-selector label {
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+    text-align: center;
+}
+
+.select-wrapper select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    padding: 0.4rem 0 0;
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+/* Botón luchar deshabilitado */
+.btn-luchar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
 
 /* Botón Luchar */
 .center-action {
